@@ -1,5 +1,4 @@
-import tkinter as tk
-import tkinter.ttk as ttk
+from tkinter import *
 from algorithm.dropDownMenu import *
 '''
 to find out what you can do with a certain tkinter object...
@@ -12,22 +11,44 @@ or you can compare what methods a certain object has
 or print every option!
 	print(dir(btn))
 	print(set(dir(btn)) - set(dir(frm)))
-'''
-print(dir(tk))
-class MyGrid():
-    def __init__(self, master, w=250, h=200, xdim=5, ydim=4):
-        canvas = tk.Canvas(master, width=w, height=h)
-        rectS = (w/xdim, h/ydim)
-        for i in range(0, xdim):
-            for j in range(0, ydim):
-                canvas.create_rectangle(rectS[0]*i, rectS[1]*j, rectS[0], rectS[1])
-        self.canvas = canvas
-    
 
 root = tk.Tk()
 root.geometry("800x800")
+
 ddm = AlgorithmSelection(root)
 ddm.grid(row=0, column=0, sticky='nw')
-grid = MyGrid(root)
+ex = grid()
+
+root.mainloop()
+'''
+def drawRectangle(canvas, x1, y1, w, h):
+    canvas.create_rectangle(x1,y1,x1+w, y1+h, fill="blue")
+
+def grid(Canvas):
+    def __init__(self, root, w, height, bg):
+        super().__init__(root, wi)
+        self.initUI()     
+
+root = Tk()
+root.title('Python Pathfinder')
+root.geometry("800x800")
+
+canvas_size = (500,500)
+my_canvas = grid(root, width=canvas_size[0], height=canvas_size[1], bg="white")
+#my_canvas = Canvas(root, width=canvas_size[0], height=canvas_size[1], bg="white")
+#my_canvas.pack(pady=20)
+#
+#square_size = (94,94)
+#offset = (3,3)
+#tile_size=(square_size[0]+2*offset[0],square_size[1]+2*offset[1])
+#numSquares = (canvas_size[0]/tile_size[0], canvas_size[1]/tile_size[1])
+#for i in range(0,int(numSquares[0])):
+    #for j in range(0,int(numSquares[1])):
+        #drawRectangle(
+                 #my_canvas,
+                 #tile_size[0] * i + offset[0],
+                 #tile_size[1] * j + offset[1],
+                 #square_size[0],square_size[1])
+
 root.mainloop()
 

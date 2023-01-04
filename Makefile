@@ -1,4 +1,4 @@
 all:
-	windows
-windows:
+	make windows-run
+windows-run:
 	python3 window.py
