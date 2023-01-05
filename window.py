@@ -1,6 +1,7 @@
 from tkinter import *
 from algorithm.dropDownMenu import *
 from algorithm.grid import *
+from algorithm.UIManager import *
 
 '''
 to find out what you can do with a certain tkinter object...
@@ -18,6 +19,8 @@ or print every option!
 root = Tk()
 root.title('Python Pathfinder')
 root.geometry("800x800")
+
+manager = Manager(root)
 
 root.mainloop()
 
