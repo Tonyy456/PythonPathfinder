@@ -1,5 +1,6 @@
 from tkinter import *
 from algorithm.dropDownMenu import *
+
 '''
 to find out what you can do with a certain tkinter object...
 	btn = ttk.Button(frm, ...)
@@ -11,24 +12,10 @@ or you can compare what methods a certain object has
 or print every option!
 	print(dir(btn))
 	print(set(dir(btn)) - set(dir(frm)))
-
-root = tk.Tk()
-root.geometry("800x800")
-
-ddm = AlgorithmSelection(root)
-ddm.grid(row=0, column=0, sticky='nw')
-ex = grid()
-
-root.mainloop()
 '''
 
 def drawRectangle(canvas, x1, y1, w, h):
     canvas.create_rectangle(x1,y1,x1+w, y1+h, fill="blue")
-
-#def Grid():
-    #def __init__(self, gridRoot, gridWidth, gridHeight, gridBGFill):
-        #self.canvas = Canvas(root=gridRoot, width=gridWidth, height=gridHeight, fill=gridBGFill)
-        #self.canvas.initUI()     
 
 root = Tk()
 root.title('Python Pathfinder')
