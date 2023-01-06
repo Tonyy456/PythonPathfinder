@@ -21,12 +21,19 @@ class AlgorithmSelection(tk.OptionMenu):
             "Depth First Search",
             "Bredth First Search"
         ]
-
         clicked = tk.StringVar()
-        clicked.set(options[0])
+        self.menuValue = options[3]
+        clicked.set(self.menuValue)
 
-        tk.OptionMenu.__init__(self, master, clicked, *options)
+        tk.OptionMenu.__init__(self, master, clicked, command=self._update_value, *options)
+
         self.config(width=20)
-        self.pack()
-
         self.clicked = clicked
+
+    def _update_value(self, selection):
+        self.menuValue=selection
+
+    def getValue(self):
+        return str(self.menuValue)
+        
+        

@@ -1,7 +1,5 @@
 from tkinter import *
-from algorithm.dropDownMenu import *
-from algorithm.grid import *
-from algorithm.UIManager import *
+from main.uiManager import *
 
 '''
 to find out what you can do with a certain tkinter object...
